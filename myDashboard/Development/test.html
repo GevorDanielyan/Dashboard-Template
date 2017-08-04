@@ -1,0 +1,27 @@
+<!-- Provide the URL to visualize.js -->
+<script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
+
+<!-- Provide a container for the report -->
+<div id="container">Loading...</div>
+
+
+<script>
+    visualize({
+        auth:{
+            name:"jasperadmin",
+            password:"jasperadmin",
+            //organization:"organization_1"
+        }
+    }, function(v){
+        var report = v.report({
+            resource:"/public/Samples/Reports/9.CustomerDetailReport",
+            container:"#container",
+            params:{"customerId":["4023"]},
+            error:function(err){
+                alert(err.message);
+            }
+        });
+    
+    });
+    
+</script>
