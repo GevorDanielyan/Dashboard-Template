@@ -1,2 +1,2 @@
 # Dashboard-Template
-I'm creating dashboard template
+Key Performance Indicator(KPI) Dashboard sample.
